@@ -5,14 +5,14 @@ import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 
 mnist = input_data.read_data_sets('data/', one_hot=True)
-print("MNIST READY")
+print("MNIST Loading successful ")
 
 # 定义网络参数
 n_input = 784 # 输入的维度
 n_output = 10 # 标签的维度
 learning_rate = 0.001
 dropout = 0.75
-# 定义函数print_activations来显示网络每一层结构，展示每一个卷积层或池化层输出tensor的尺寸
+#用于输出每层处理后的结果尺寸
 def print_activations(t):
     print(t.op.name, '', t.get_shape().as_list())
 
@@ -25,7 +25,7 @@ def max_pool(input):
 # 定义全连接操作
 def fc(input, w, b):
     return tf.nn.relu(tf.add(tf.matmul(input, w), b)) # w*x+b，再通过非线性激活函数relu
-# 定义网络结构
+# 定义AlexNet网络结构
 def alex_net(_input, _weights, _biases, _keep_prob):
     _input_r = tf.reshape(_input, [-1, 28, 28, 1])  # 对图像做一个预处理，转换为tf支持的格式，即[n, h, w, c],-1是确定好其它3维后，让tf去推断剩下的1维
 
@@ -87,7 +87,7 @@ def alex_net(_input, _weights, _biases, _keep_prob):
         print_activations(_out)
 
     return _out
-print("CNN READY")
+print("AlexNet initialize successfully")
 x = tf.placeholder(tf.float32, [None, n_input]) # 用placeholder先占地方，样本个数不确定为None
 y = tf.placeholder(tf.float32, [None, n_output]) # 用placeholder先占地方，样本个数不确定为None
 keep_prob = tf.placeholder(tf.float32)
@@ -119,13 +119,22 @@ cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=pred, label
 optm = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost) # 梯度下降优化器
 corr = tf.equal(tf.argmax(pred, 1), tf.argmax(y, 1)) # tf.equal()对比预测值的索引和实际label的索引是否一样，一样返回True，不一样返回False
 accuracy = tf.reduce_mean(tf.cast(corr, tf.float32)) # 将pred即True或False转换为1或0,并对所有的判断结果求均值
+
+# 定义一个saver,用于存储训练好的模型
+saver = tf.train.Saver()
+
+# 定义存储路径
+ckpt_dir = "./ckpt_dir"
+if not os.path.exists(ckpt_dir):
+    os.makedirs(ckpt_dir)
+
 # 初始化所有参数
 init = tf.global_variables_initializer()
-print("FUNCTIONS READY")
+print("function initialize successfully")
 
-# 上面神经网络结构定义好之后，下面定义一些超参数
+#---------------------上面神经网络结构定义好之后，下面定义一些超参数----------------------
 training_epochs = 1000 # 所有样本迭代1000次
-batch_size = 1 # 每进行一次迭代选择50个样本
+batch_size = 50 # 每进行一次迭代选择50个样本
 display_step = 10
 
 sess = tf.Session() # 定义一个Session
@@ -139,7 +148,7 @@ for epoch in range(training_epochs):
         # 获取批数据
         sess.run(optm, feed_dict={x: batch_xs, y: batch_ys, keep_prob:dropout})
         avg_cost += sess.run(cost, feed_dict={x: batch_xs, y: batch_ys, keep_prob:1.0})/total_batch
-    if epoch % display_step == 0:
+    if epoch % display_step == 0:#每display_step显示一次
         train_accuracy = sess.run(accuracy, feed_dict={x: batch_xs, y: batch_ys, keep_prob: 1.0})
         test_accuracy = sess.run(accuracy, feed_dict={x: mnist.test.images, y: mnist.test.labels, keep_prob: 1.0})
         print("Epoch: %03d/%03d cost: %.9f TRAIN ACCURACY: %.3f TEST ACCURACY: %.3f" % (
