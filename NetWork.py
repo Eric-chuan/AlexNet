@@ -132,9 +132,15 @@ if not os.path.exists(ckpt_dir):
 init = tf.global_variables_initializer()
 print("function initialize successfully")
 
+<<<<<<< HEAD
 #---------------------上面神经网络结构定义好之后，下面定义一些超参数----------------------
 training_epochs = 1000 # 所有样本迭代1000次
 batch_size = 50 # 每进行一次迭代选择50个样本
+=======
+# 上面神经网络结构定义好之后，下面定义一些超参数
+training_epochs = 10 # 所有样本迭代1000次
+batch_size = 1 # 每进行一次迭代选择50个样本
+>>>>>>> 47ddaa86d1d9189f22dce5e3994a74b351b29fbe
 display_step = 10
 
 sess = tf.Session() # 定义一个Session
