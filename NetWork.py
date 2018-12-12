@@ -124,7 +124,7 @@ init = tf.global_variables_initializer()
 print("FUNCTIONS READY")
 
 # 上面神经网络结构定义好之后，下面定义一些超参数
-training_epochs = 1000 # 所有样本迭代1000次
+training_epochs = 10 # 所有样本迭代1000次
 batch_size = 1 # 每进行一次迭代选择50个样本
 display_step = 10
 

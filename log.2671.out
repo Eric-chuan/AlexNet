@@ -1,0 +1,30 @@
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+MNIST READY
+CNN READY
+conv1/Relu  [None, 28, 28, 64]
+pool1/MaxPool  [None, 14, 14, 64]
+conv2/Relu  [None, 14, 14, 128]
+pool2/MaxPool  [None, 7, 7, 128]
+conv3/Relu  [None, 7, 7, 256]
+conv4/Relu  [None, 7, 7, 256]
+conv5/Relu  [None, 7, 7, 128]
+pool3/MaxPool  [None, 4, 4, 128]
+fc1/dropout/mul  [None, 1024]
+fc2/dropout/mul  [None, 1024]
+out/Add  [None, 10]
+FUNCTIONS READY
+Epoch: 000/010 cost: 0.193486979 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.947
+2018-12-11 23:37:29.513536: step 0, duration = 323.458
+2018-12-11 23:42:28.503844: step 1, duration = 298.990
+2018-12-11 23:48:08.984265: step 2, duration = 340.480
+2018-12-11 23:53:55.415881: step 3, duration = 346.431
+2018-12-11 23:59:44.749966: step 4, duration = 349.334
+2018-12-12 00:05:29.082346: step 5, duration = 344.332
+2018-12-12 00:11:15.100108: step 6, duration = 346.018
+2018-12-12 00:17:01.883581: step 7, duration = 346.783
+2018-12-12 00:22:46.464117: step 8, duration = 344.580
+2018-12-12 00:28:27.286331: step 9, duration = 340.822
+DONE
