@@ -1,0 +1,129 @@
+Extracting data/train-images-idx3-ubyte.gz
+Extracting data/train-labels-idx1-ubyte.gz
+Extracting data/t10k-images-idx3-ubyte.gz
+Extracting data/t10k-labels-idx1-ubyte.gz
+MNIST Loading successful 
+AlexNet initialize successfully
+conv1/Relu  [None, 28, 28, 64]
+pool1/MaxPool  [None, 14, 14, 64]
+conv2/Relu  [None, 14, 14, 128]
+pool2/MaxPool  [None, 7, 7, 128]
+conv3/Relu  [None, 7, 7, 256]
+conv4/Relu  [None, 7, 7, 256]
+conv5/Relu  [None, 7, 7, 128]
+pool3/MaxPool  [None, 4, 4, 128]
+fc1/dropout/mul  [None, 1024]
+fc2/dropout/mul  [None, 1024]
+out/Add  [None, 10]
+function initialize successfully
+Epoch: 000/100 cost: 0.454085089 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.982
+2018-12-12 12:59:59.067929: step 0, duration = 18.968
+2018-12-12 13:00:08.135073: step 1, duration = 9.067
+2018-12-12 13:00:17.233990: step 2, duration = 9.099
+2018-12-12 13:00:26.453243: step 3, duration = 9.219
+2018-12-12 13:00:35.758245: step 4, duration = 9.305
+2018-12-12 13:00:44.854100: step 5, duration = 9.096
+2018-12-12 13:00:54.001874: step 6, duration = 9.148
+2018-12-12 13:01:02.972977: step 7, duration = 8.971
+2018-12-12 13:01:12.203235: step 8, duration = 9.230
+2018-12-12 13:01:21.361887: step 9, duration = 9.159
+Epoch: 010/100 cost: 0.008427914 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.989
+2018-12-12 13:01:30.569378: step 10, duration = 9.207
+2018-12-12 13:01:39.599473: step 11, duration = 9.030
+2018-12-12 13:01:48.705717: step 12, duration = 9.106
+2018-12-12 13:01:57.781968: step 13, duration = 9.076
+2018-12-12 13:02:06.843856: step 14, duration = 9.062
+2018-12-12 13:02:15.747849: step 15, duration = 8.904
+2018-12-12 13:02:24.619335: step 16, duration = 8.871
+2018-12-12 13:02:33.455944: step 17, duration = 8.837
+2018-12-12 13:02:42.240466: step 18, duration = 8.784
+2018-12-12 13:02:51.105807: step 19, duration = 8.865
+Epoch: 020/100 cost: 0.003415418 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.992
+2018-12-12 13:03:00.149263: step 20, duration = 9.043
+2018-12-12 13:03:08.894744: step 21, duration = 8.745
+2018-12-12 13:03:17.687824: step 22, duration = 8.793
+2018-12-12 13:03:26.468923: step 23, duration = 8.781
+2018-12-12 13:03:35.356592: step 24, duration = 8.888
+2018-12-12 13:03:44.948955: step 25, duration = 9.592
+2018-12-12 13:03:54.113433: step 26, duration = 9.164
+2018-12-12 13:04:03.251404: step 27, duration = 9.138
+2018-12-12 13:04:12.404429: step 28, duration = 9.153
+2018-12-12 13:04:21.524485: step 29, duration = 9.120
+Epoch: 030/100 cost: 0.002004487 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.991
+2018-12-12 13:04:30.824718: step 30, duration = 9.300
+2018-12-12 13:04:39.977296: step 31, duration = 9.153
+2018-12-12 13:04:49.143398: step 32, duration = 9.166
+2018-12-12 13:04:58.312510: step 33, duration = 9.169
+2018-12-12 13:05:07.521585: step 34, duration = 9.209
+2018-12-12 13:05:16.822669: step 35, duration = 9.301
+2018-12-12 13:05:26.020485: step 36, duration = 9.198
+2018-12-12 13:05:35.207021: step 37, duration = 9.186
+2018-12-12 13:05:44.305623: step 38, duration = 9.098
+2018-12-12 13:05:53.255279: step 39, duration = 8.950
+Epoch: 040/100 cost: 0.003029334 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.992
+2018-12-12 13:06:02.377515: step 40, duration = 9.122
+2018-12-12 13:06:11.256513: step 41, duration = 8.879
+2018-12-12 13:06:20.117153: step 42, duration = 8.861
+2018-12-12 13:06:28.990014: step 43, duration = 8.873
+2018-12-12 13:06:37.893289: step 44, duration = 8.903
+2018-12-12 13:06:46.819508: step 45, duration = 8.926
+2018-12-12 13:06:55.749045: step 46, duration = 8.929
+2018-12-12 13:07:04.684440: step 47, duration = 8.935
+2018-12-12 13:07:13.512431: step 48, duration = 8.828
+2018-12-12 13:07:22.356459: step 49, duration = 8.844
+Epoch: 050/100 cost: 0.003303688 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.991
+2018-12-12 13:07:31.429527: step 50, duration = 9.073
+2018-12-12 13:07:40.368504: step 51, duration = 8.939
+2018-12-12 13:07:49.345434: step 52, duration = 8.977
+2018-12-12 13:07:58.351631: step 53, duration = 9.006
+2018-12-12 13:08:07.318343: step 54, duration = 8.967
+2018-12-12 13:08:16.333589: step 55, duration = 9.015
+2018-12-12 13:08:25.355631: step 56, duration = 9.022
+2018-12-12 13:08:34.332715: step 57, duration = 8.977
+2018-12-12 13:08:43.351376: step 58, duration = 9.019
+2018-12-12 13:08:52.293758: step 59, duration = 8.942
+Epoch: 060/100 cost: 0.001342061 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.992
+2018-12-12 13:09:01.535770: step 60, duration = 9.242
+2018-12-12 13:09:10.661995: step 61, duration = 9.126
+2018-12-12 13:09:19.655497: step 62, duration = 8.993
+2018-12-12 13:09:28.706015: step 63, duration = 9.050
+2018-12-12 13:09:37.746125: step 64, duration = 9.040
+2018-12-12 13:09:46.759545: step 65, duration = 9.013
+2018-12-12 13:09:55.736157: step 66, duration = 8.977
+2018-12-12 13:10:04.806113: step 67, duration = 9.070
+2018-12-12 13:10:13.979963: step 68, duration = 9.174
+2018-12-12 13:10:23.128693: step 69, duration = 9.149
+Epoch: 070/100 cost: 0.002665044 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.991
+2018-12-12 13:10:32.443676: step 70, duration = 9.315
+2018-12-12 13:10:41.491720: step 71, duration = 9.048
+2018-12-12 13:10:50.463278: step 72, duration = 8.971
+2018-12-12 13:10:59.405287: step 73, duration = 8.942
+2018-12-12 13:11:08.187098: step 74, duration = 8.782
+2018-12-12 13:11:16.930671: step 75, duration = 8.744
+2018-12-12 13:11:25.783674: step 76, duration = 8.853
+2018-12-12 13:11:34.576006: step 77, duration = 8.792
+2018-12-12 13:11:43.498668: step 78, duration = 8.923
+2018-12-12 13:11:52.542460: step 79, duration = 9.044
+Epoch: 080/100 cost: 0.005304945 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.990
+2018-12-12 13:12:01.560343: step 80, duration = 9.018
+2018-12-12 13:12:10.445762: step 81, duration = 8.885
+2018-12-12 13:12:19.485692: step 82, duration = 9.040
+2018-12-12 13:12:28.407542: step 83, duration = 8.922
+2018-12-12 13:12:37.266238: step 84, duration = 8.859
+2018-12-12 13:12:46.199267: step 85, duration = 8.933
+2018-12-12 13:12:55.094957: step 86, duration = 8.896
+2018-12-12 13:13:04.122599: step 87, duration = 9.028
+2018-12-12 13:13:13.194554: step 88, duration = 9.072
+2018-12-12 13:13:22.164194: step 89, duration = 8.970
+Epoch: 090/100 cost: 0.002920835 TRAIN ACCURACY: 1.000 TEST ACCURACY: 0.990
+2018-12-12 13:13:31.118525: step 90, duration = 8.954
+2018-12-12 13:13:39.927451: step 91, duration = 8.809
+2018-12-12 13:13:48.727756: step 92, duration = 8.800
+2018-12-12 13:13:57.507336: step 93, duration = 8.779
+2018-12-12 13:14:06.208710: step 94, duration = 8.701
+2018-12-12 13:14:14.925693: step 95, duration = 8.717
+2018-12-12 13:14:23.609858: step 96, duration = 8.684
+2018-12-12 13:14:32.326125: step 97, duration = 8.716
+2018-12-12 13:14:40.977601: step 98, duration = 8.651
+2018-12-12 13:14:49.653079: step 99, duration = 8.675
+DONE
