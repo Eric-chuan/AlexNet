@@ -135,7 +135,7 @@ init = tf.global_variables_initializer()
 print("function initialize successfully")
 
 #---------------------上面神经网络结构定义好之后，下面定义一些超参数----------------------
-training_epochs = 1000 # 所有样本迭代1000次
+training_epochs = 1 # 所有样本迭代1000次
 batch_size = 50 # 每进行一次迭代选择50个样本
 display_step = 10
 
@@ -158,5 +158,6 @@ for epoch in range(training_epochs):
         # 计算每轮迭代的平均耗时mn和标准差sd，并显示
     duration = time.time() - start_time
     print('%s: step %d, duration = %.3f' % (datetime.now(), epoch, duration))
+    saver.save(sess,ckpt_dir+"/model.ckpt",global_step=epoch)
 
 print("DONE")
